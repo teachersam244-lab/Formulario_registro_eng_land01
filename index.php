@@ -18,8 +18,6 @@ include 'db.php';
         <form action="insert.php" method="POST"> 
 
 
-
-
         <div class="input-group">
 
             <div class="field">
