@@ -101,9 +101,8 @@ $result = $conn-> query("SELECT * FROM users");
 
             <td><?= $row['email'] ?></td>
 
-            <td><?= $row['password'] ?></td>
+            <td>••••••••</td>
 
-            <td><?= $row['confirm_password'] ?></td>
 
             <td>
 
