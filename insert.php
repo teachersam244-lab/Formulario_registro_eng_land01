@@ -12,9 +12,11 @@ if ($password !== $confirm_password) {
     echo "Las contraseñas no coinciden";
     exit;
 }
+echo $confirm_password;
+exit;
 
-$sql = "INSERT INTO users (first_name, last_name, email, password)
-VALUES ('$first_name', '$last_name', '$email', '$password')";
+$sql = "INSERT INTO users (first_name, last_name, email, password, confirm_password)
+VALUES ('$first_name', '$last_name', '$email', '$password', '$confirm_password')";
 
 if ($conn->query($sql)) {
     echo "Usuario guardado correctamente";

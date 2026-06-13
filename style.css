@@ -1,12 +1,12 @@
 body{
     margin:0;
     font-family:'Poppins', sans-serif;
-    background-color: #A04BFF;
+    background-color: #9f4bffc6;
     min-height:100vh;
     font-size: 18px;
 }
 .container{
-    width:700px;
+    width:900px;
     margin: 50px auto;
     background-color:#fff;
     padding: 25px;
@@ -37,7 +37,7 @@ input{
 }
 button{
     padding: 10px 14px;
-    width: 70%;
+    width: 60%;
     background-color:#A04BFF;
     color:white;
     font-size: 18px;

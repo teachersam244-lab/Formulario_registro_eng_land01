@@ -2,6 +2,8 @@
 
 include 'db.php';
 
+$result = $conn-> query("SELECT * FROM users");
+
 ?>
 
 <!DOCTYPE html> 
@@ -85,11 +87,36 @@ include 'db.php';
                 <th>Lastname </th> 
                 <th>Email </th> 
                 <th>Password </th> 
+                <th>Confirm Password </th>
             </tr> 
-        </table> 
-        </form>
-    </div>
     
+    <?php while ($row = $result->fetch_assoc()) { ?>
+        <tr>
+
+            <td><?= $row['id'] ?></td>
+
+            <td><?= $row['first_name'] ?></td>
+
+            <td><?= $row['last_name'] ?></td>
+
+            <td><?= $row['email'] ?></td>
+
+            <td><?= $row['password'] ?></td>
+
+            <td><?= $row['confirm_password'] ?></td>
+
+            <td>
+
+            <a 
+            href="delete.php?id=<?= $row['id'] ?>"
+            onclick="return confirm('delete user?')"
+            >
+            Delete
+            </a>
+  
+</td>
+</tr>
+<?php } ?>
+</table>
 </body>
 </html>
-
